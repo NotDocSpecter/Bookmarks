@@ -1,0 +1,53 @@
+{
+  "name": "slash-extension",
+  "displayName": "Slash",
+  "version": "1.0.11",
+  "description": "An open source, self-hosted platform for sharing and managing your most frequently used links. Save and share your links very easily.",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "lint": "eslint --ext .js,.ts,.tsx, src",
+    "lint-fix": "eslint --ext .js,.ts,.tsx, src --fix"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/joy": "5.0.0-beta.48",
+    "@plasmohq/storage": "^1.12.0",
+    "classnames": "^2.5.1",
+    "lucide-react": "^0.454.0",
+    "plasmo": "^0.89.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/chrome": "^0.0.280",
+    "@types/node": "^22.8.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  },
+  "manifest": {
+    "permissions": [
+      "activeTab",
+      "storage",
+      "webRequest"
+    ],
+    "host_permissions": [
+      "*://*/*"
+    ]
+  }
+}

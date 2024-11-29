@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package slash.store;
+
+import "store/common.proto";
+import "store/idp.proto";
+
+option go_package = "gen/store";
+
+message WorkspaceSetting {
+  WorkspaceSettingKey key = 1;
+  string raw = 2;
+
+  oneof value {
+    GeneralSetting general = 3;
+    SecuritySetting security = 4;
+    ShortcutRelatedSetting shortcut_related = 5;
+    IdentityProviderSetting identity_provider = 6;
+  }
+
+  message GeneralSetting {
+    string secret_session = 1;
+    string license_key = 2;
+    string instance_url = 3;
+    bytes branding = 4;
+    string custom_style = 5;
+  }
+
+  message SecuritySetting {
+    bool disallow_user_registration = 1;
+    bool disallow_password_auth = 2;
+  }
+
+  message ShortcutRelatedSetting {
+    Visibility default_visibility = 1;
+  }
+
+  message IdentityProviderSetting {
+    repeated IdentityProvider identity_providers = 1;
+  }
+}
+
+enum WorkspaceSettingKey {
+  WORKSPACE_SETTING_KEY_UNSPECIFIED = 0;
+  // Workspace general settings.
+  WORKSPACE_SETTING_GENERAL = 1;
+  // Workspace security settings.
+  WORKSPACE_SETTING_SECURITY = 2;
+  // Workspace shortcut-related settings.
+  WORKSPACE_SETTING_SHORTCUT_RELATED = 3;
+  // Workspace identity provider settings.
+  WORKSPACE_SETTING_IDENTITY_PROVIDER = 4;
+
+  // TODO: remove the following keys.
+  // The license key.
+  WORKSPACE_SETTING_LICENSE_KEY = 10;
+  // The secret session key used to encrypt session data.
+  WORKSPACE_SETTING_SECRET_SESSION = 11;
+  // The custom style.
+  WORKSPACE_SETTING_CUSTOM_STYLE = 12;
+  // The default visibility of shortcuts and collections.
+  WORKSPACE_SETTING_DEFAULT_VISIBILITY = 13;
+}

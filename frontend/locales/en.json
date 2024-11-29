@@ -1,0 +1,82 @@
+{
+  "common": {
+    "about": "About",
+    "loading": "Loading",
+    "cancel": "Cancel",
+    "save": "Save",
+    "create": "Create",
+    "download": "Download",
+    "edit": "Edit",
+    "delete": "Delete",
+    "language": "Language",
+    "search": "Search",
+    "email": "Email",
+    "password": "Password",
+    "account": "Account",
+    "or": "Or"
+  },
+  "auth": {
+    "sign-in": "Sign in",
+    "sign-up": "Sign up",
+    "sign-out": "Sign out",
+    "create-your-account": "Create your account",
+    "host-tip": "You are registering as Admin.",
+    "sign-in-with": "Sign in with {{provider}}"
+  },
+  "analytics": {
+    "self": "Analytics",
+    "top-sources": "Top sources",
+    "source": "Source",
+    "visitors": "Visitors",
+    "devices": "Devices",
+    "browser": "Browser",
+    "browsers": "Browsers",
+    "operating-system": "Operating System"
+  },
+  "shortcut": {
+    "visits": "{{count}} visits",
+    "visibility": {
+      "workspace": {
+        "self": "Workspace",
+        "description": "Workspace members can access"
+      },
+      "public": {
+        "self": "Public",
+        "description": "Public on the internet"
+      }
+    }
+  },
+  "filter": {
+    "all": "All",
+    "personal": "Personal",
+    "compact-mode": "Compact mode",
+    "order-by": "Order by",
+    "direction": "Direction"
+  },
+  "user": {
+    "self": "User",
+    "nickname": "Nickname",
+    "email": "Email",
+    "role": "Role",
+    "profile": "Profile"
+  },
+  "settings": {
+    "self": "Setting",
+    "preference": {
+      "self": "Preference",
+      "color-theme": "Color theme"
+    },
+    "workspace": {
+      "self": "Workspace settings",
+      "custom-style": "Custom style",
+      "disallow-user-registration": {
+        "self": "Disallow user registration"
+      },
+      "default-visibility": "Default visibility",
+      "member": {
+        "self": "Member",
+        "add": "Add member"
+      }
+    }
+  }
+}

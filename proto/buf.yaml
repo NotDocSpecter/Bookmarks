@@ -1,0 +1,15 @@
+version: v2
+name: buf.build/yourselfhosted/slash
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/grpc-ecosystem/grpc-gateway
+lint:
+  use:
+    - BASIC
+  except:
+    - ENUM_VALUE_PREFIX
+    - PACKAGE_DIRECTORY_MATCH
+    - PACKAGE_VERSION_SUFFIX
+breaking:
+  use:
+    - FILE

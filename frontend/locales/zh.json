@@ -1,0 +1,79 @@
+{
+  "common": {
+    "about": "关于",
+    "loading": "加载中",
+    "cancel": "取消",
+    "save": "保存",
+    "create": "创建",
+    "download": "下载",
+    "edit": "编辑",
+    "delete": "删除",
+    "language": "语言",
+    "search": "搜索",
+    "email": "邮箱",
+    "password": "密码",
+    "account": "账号"
+  },
+  "auth": {
+    "sign-in": "登录",
+    "sign-up": "注册",
+    "sign-out": "退出登录",
+    "create-your-account": "创建账号"
+  },
+  "analytics": {
+    "self": "分析",
+    "top-sources": "热门来源",
+    "source": "来源",
+    "visitors": "访客数",
+    "devices": "设备",
+    "browser": "浏览器",
+    "browsers": "浏览器",
+    "operating-system": "操作系统"
+  },
+  "shortcut": {
+    "visits": "{{count}} 次访问",
+    "visibility": {
+      "workspace": {
+        "self": "工作区",
+        "description": "工作区成员可以访问"
+      },
+      "public": {
+        "self": "公开的",
+        "description": "公开至互联网"
+      }
+    }
+  },
+  "filter": {
+    "all": "所有",
+    "personal": "我的",
+    "compact-mode": "紧凑模式",
+    "order-by": "排序方式",
+    "direction": "方向"
+  },
+  "user": {
+    "self": "用户",
+    "nickname": "昵称",
+    "email": "邮箱",
+    "role": "角色",
+    "profile": "账号",
+    "action": {
+      "add-user": "添加用户"
+    }
+  },
+  "settings": {
+    "self": "设置",
+    "preference": {
+      "self": "偏好设置",
+      "color-theme": "主题"
+    },
+    "workspace": {
+      "self": "系统设置",
+      "custom-style": "自定义样式",
+      "enable-user-signup": {
+        "self": "启用用户注册",
+        "description": "允许其他用户注册新账号"
+      },
+      "default-visibility": "默认可见性"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package slash.api.v1;
+
+option go_package = "gen/api/v1";
+
+enum State {
+  STATE_UNSPECIFIED = 0;
+  ACTIVE = 1;
+  INACTIVE = 2;
+}
+
+enum Visibility {
+  VISIBILITY_UNSPECIFIED = 0;
+
+  WORKSPACE = 1;
+
+  PUBLIC = 2;
+}

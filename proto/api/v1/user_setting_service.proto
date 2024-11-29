@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package slash.api.v1;
+
+import "google/api/annotations.proto";
+import "google/api/client.proto";
+import "google/protobuf/field_mask.proto";
+
+option go_package = "gen/api/v1";
+
+service UserSettingService {
+  // GetUserSetting returns the user setting.
+  rpc GetUserSetting(GetUserSettingRequest) returns (UserSetting) {
+    option (google.api.http) = {get: "/api/v1/users/{id}/settings"};
+    option (google.api.method_signature) = "id";
+  }
+  // UpdateUserSetting updates the user setting.
+  rpc UpdateUserSetting(UpdateUserSettingRequest) returns (UserSetting) {
+    option (google.api.http) = {
+      patch: "/api/v1/users/{id}/settings"
+      body: "user_setting"
+    };
+    option (google.api.method_signature) = "user_setting,update_mask";
+  }
+}
+
+message UserSetting {
+  int32 user_id = 1;
+
+  GeneralSetting general = 2;
+
+  AccessTokensSetting access_tokens = 3;
+
+  message GeneralSetting {
+    string locale = 1;
+    string color_theme = 2;
+  }
+
+  message AccessTokensSetting {
+    message AccessToken {
+      // The access token is a JWT token, including expiration time, issuer, etc.
+      string access_token = 1;
+      // A description for the access token.
+      string description = 2;
+    }
+    repeated AccessToken access_tokens = 1; // Nested repeated field
+  }
+}
+
+message GetUserSettingRequest {
+  // id is the user id.
+  int32 id = 1;
+}
+
+message UpdateUserSettingRequest {
+  // id is the user id.
+  int32 id = 1;
+
+  // user_setting is the user setting to update.
+  UserSetting user_setting = 2;
+
+  // update_mask is the field mask to update.
+  google.protobuf.FieldMask update_mask = 3;
+}
